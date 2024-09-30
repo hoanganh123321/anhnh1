@@ -14,8 +14,8 @@ jobs:
         with:
           name: "accelario"
         env:
-          VIRTUALIZATION_IP: ${{ vars.VIRTUALIZATION_IP }}
-          TGT_HOME_ID: ${{ vars.TGT_HOME_ID }}
+          VIRTUALIZATION_IP: ${{ 10.10.12.140 }}
+          TGT_HOME_ID: ${{ vars.TGT_HOME_ }}
           SNAPSHOT_ID: ${{ vars.SNAPSHOT_ID }}
           VIRTUALIZATION_LOGIN: ${{ secrets.VIRTUALIZATION_LOGIN }}
           VIRTUALIZATION_PASSWORD: ${{ secrets.VIRTUALIZATION_PASSWORD }}

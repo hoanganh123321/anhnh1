@@ -1,0 +1,21 @@
+name: Test Action
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Run custom Bash script action
+        uses: ./  # This points to the action in your current repo
+        with:
+          name: "accelario"
+        env:
+          VIRTUALIZATION_IP: ${{ vars.VIRTUALIZATION_IP }}
+          TGT_HOME_ID: ${{ vars.TGT_HOME_ID }}
+          SNAPSHOT_ID: ${{ vars.SNAPSHOT_ID }}
+          VIRTUALIZATION_LOGIN: ${{ secrets.VIRTUALIZATION_LOGIN }}
+          VIRTUALIZATION_PASSWORD: ${{ secrets.VIRTUALIZATION_PASSWORD }}

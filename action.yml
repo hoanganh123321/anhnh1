@@ -13,7 +13,7 @@ runs:
     - name: Start_VDB
       shell: bash
       env:
-        VIRTUALIZATION_IP: ${{ env.VIRTUALIZATION_IP }}
+        VIRTUALIZATION_IP: "10.10.12.140"
         TGT_HOME_ID: ${{ env.TGT_HOME_ID }}
         SNAPSHOT_ID: ${{ env.SNAPSHOT_ID }}
         VIRTUALIZATION_LOGIN: ${{ env.VIRTUALIZATION_LOGIN }}
